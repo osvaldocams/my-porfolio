@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css'
+
 interface Props {
     title: string;
 }
@@ -13,12 +15,11 @@ const { title } = Astro.props
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
 </head>
-<body>
+<body class="bg-neutral-950 text-neutral-100 font-sans antialiased">
     <slot />
 </body>
 </html>
 <style is:global>
-	/* Aquí puedes poner fuentes de Google Fonts o locales */
 	:root {
 		--font-sans: 'Inter Variable', sans-serif;
 	}
